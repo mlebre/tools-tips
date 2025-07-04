@@ -1,0 +1,11 @@
+# Language fixture references for regex fixtures
+# These Lang entities should match the lang_id values used in the SQL file
+
+Obiz\MegaBundle\Entity\Lang:
+  lang_fr:
+    lang_id: 1
+    # Add other Lang entity properties as needed
+  
+  lang_nl:
+    lang_id: 3
+    # Add other Lang entity properties as needed

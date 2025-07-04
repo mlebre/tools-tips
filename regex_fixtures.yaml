@@ -1,0 +1,257 @@
+Obiz\MegaBundle\Entity\Regex:
+  # French regex entries (lang=1)
+  regex_fr_isName:
+    name: 'isName'
+    pattern: '/^[a-zA-Z- ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,300}$/'
+    description: 'Only letters (accentuated included), spaces and dashes. Between 2 and 300 characters.'
+    lang: '@lang_fr'
+  
+  regex_fr_isCity:
+    name: 'isCity'
+    pattern: '/^[a-zA-Z-ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,300}$/'
+    description: 'Only letters (accentuated included) and dashes. Between 2 and 300 characters.'
+    lang: '@lang_fr'
+  
+  regex_fr_isAddress:
+    name: 'isAddress'
+    pattern: '/^[a-zA-Z0-9- ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,300}$/'
+    description: 'All characters (accentuated and digits included), spaces and dashes. Between 2 and 300 characters.'
+    lang: '@lang_fr'
+  
+  regex_fr_isCountry:
+    name: 'isCountry'
+    pattern: '/^[a-zA-Z-ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,300}$/'
+    description: 'Only letters (accentuated included), spaces and dashes. Between 2 and 300 characters.'
+    lang: '@lang_fr'
+  
+  regex_fr_isInteger:
+    name: 'isInteger'
+    pattern: '/^[0-9]+$/'
+    description: 'Only numeric values'
+    lang: '@lang_fr'
+  
+  regex_fr_isPhone:
+    name: 'isPhone'
+    pattern: '/^0[0-9]([ \.-\/]?[0-9]{2}){4}$/'
+    description: 'Phone number format : 00/00/00/00/00 (separators allowed : ./- and space, phone number begins with a zero).'
+    lang: '@lang_fr'
+  
+  regex_fr_isZipcode:
+    name: 'isZipcode'
+    pattern: '/^[0-9]{5}$/'
+    description: 'Five digits'
+    lang: '@lang_fr'
+  
+  regex_fr_isEmail:
+    name: 'isEmail'
+    pattern: '/^([a-zA-Z0-9\+_\-]+)(\.[a-zA-Z0-9\+_\-]+)*@([a-zA-Z0-9\-]+\.)+[a-z]{2,6}$/'
+    description: 'Valid email (.extension between 2 and 6 characters)'
+    lang: '@lang_fr'
+  
+  regex_fr_isKeyword:
+    name: 'isKeyword'
+    pattern: '/^[a-zA-Z0-9 -_\/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,150}$/u'
+    description: 'Only characters (letters, accentuated letters and digits), spaces, dashes, underscore and slashes. Between 2 and 150 characters.'
+    lang: '@lang_fr'
+  
+  regex_fr_isLocation:
+    name: 'isLocation'
+    pattern: '/^[[:alpha:]A-Z0-9 -_\/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,150}$/u'
+    description: 'Only characters (letters, accentuated letters and digits), spaces, dashes, underscore and slashes. Between 2 and 150 characters.'
+    lang: '@lang_fr'
+  
+  regex_fr_isPseudo:
+    name: 'isPseudo'
+    pattern: '/^([a-zA-Z0-9-_]{2,30})|([a-zA-Z0-9\+_\-]+)(\.[a-zA-Z0-9\+_\-]+)*@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,6}$/u'
+    description: 'Only letters, digits, dashes and underscore (accentuated letters excluded). Between 2 and 30 characters.'
+    lang: '@lang_fr'
+  
+  regex_fr_isCivility:
+    name: 'isCivility'
+    pattern: '/^[1-2]$/'
+    description: '1 = Male, 2 = Female'
+    lang: '@lang_fr'
+  
+  regex_fr_isPassword:
+    name: 'isPassword'
+    pattern: '/^[a-zA-Z0-9\.\-_!@]{8,16}$/'
+    description: 'At least 7 letters (accentuated included) and 1 digit. Between 8 and 16 characters. Special characters allowed : ".-_!@".'
+    lang: '@lang_fr'
+  
+  regex_fr_isDate:
+    name: 'isDate'
+    pattern: '@^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$@'
+    description: 'Format dd-mm-yyyy'
+    lang: '@lang_fr'
+  
+  regex_fr_isCard:
+    name: 'isCard'
+    pattern: '/^[0-9a-zA-Z]{8}$/'
+    description: '8 characters (letters, digits),  accentuated letters excluded).'
+    lang: '@lang_fr'
+  
+  regex_fr_isOptin:
+    name: 'isOptin'
+    pattern: '/^[0-1]{1}$/i'
+    description: 'boolean'
+    lang: '@lang_fr'
+  
+  regex_fr_isMessage:
+    name: 'isMessage'
+    pattern: '/^[[a-zA-Z0-9 -_\/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ\n]{30,400}$/u'
+    description: 'Not a valid message : 30 to 400 characters, only letters, numbers, and these special characters : -_/'
+    lang: '@lang_fr'
+  
+  regex_fr_isOtherid:
+    name: 'isOtherid'
+    pattern: '/^[0-9a-zA-Z\-_ ]{4,256}$/'
+    description: 'Only letters, digits, dashes and underscore. Between 4 and 256 characters.'
+    lang: '@lang_fr'
+  
+  regex_fr_isEstablishment:
+    name: 'isEstablishment'
+    pattern: '/^[a-zA-Z0-9- ''ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ<>%&]{2,300}$/'
+    description: 'Only letters, digits, dashes and underscore. Between 2 and 300 characters.'
+    lang: '@lang_fr'
+  
+  regex_fr_isOauthId:
+    name: 'isOauthId'
+    pattern: '/^[0-9a-zA-Z]{8,45}$/'
+    description: 'Invalid OAuthId'
+    lang: '@lang_fr'
+  
+  regex_fr_isUuid:
+    name: 'isUuid'
+    pattern: '/^[a-zA-Z-0-9]{1,400}$/'
+    description: 'Invalid UUID'
+    lang: '@lang_fr'
+
+  # Dutch regex entries (lang=3)
+  regex_nl_isName:
+    name: 'isName'
+    pattern: '/^[a-zA-Z- ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,300}$/'
+    description: 'Ongeldig formaat'
+    lang: '@lang_nl'
+  
+  regex_nl_isCity:
+    name: 'isCity'
+    pattern: '/^[a-zA-Z-ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ'']{2,300}$/'
+    description: 'Ongeldig formaat'
+    lang: '@lang_nl'
+  
+  regex_nl_isAddress:
+    name: 'isAddress'
+    pattern: '/^[a-zA-Z0-9- ''ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ%?&$]{2,300}$/'
+    description: 'Ongeldig formaat'
+    lang: '@lang_nl'
+  
+  regex_nl_isCountry:
+    name: 'isCountry'
+    pattern: '/^[a-zA-Z-ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,300}$/'
+    description: 'Only letters (accentuated included), spaces and dashes. Between 2 and 300 characters.'
+    lang: '@lang_nl'
+  
+  regex_nl_isInteger:
+    name: 'isInteger'
+    pattern: '/^[0-9]+$/'
+    description: 'Alleen ronde getallen (0-9) zijn toegestaan.'
+    lang: '@lang_nl'
+  
+  regex_nl_isPhone:
+    name: 'isPhone'
+    pattern: '/^0[0-9]([ \.-\/]?[0-9]{2}){4}$/'
+    description: 'Ongeldig formaat'
+    lang: '@lang_nl'
+  
+  regex_nl_isZipcode:
+    name: 'isZipcode'
+    pattern: '/^[0-9]{4,5}$/'
+    description: 'Ongeldig formaat'
+    lang: '@lang_nl'
+  
+  regex_nl_isEmail:
+    name: 'isEmail'
+    pattern: '/^([a-zA-Z0-9\+_\-]+)(\.[a-zA-Z0-9\+_\-]+)*@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,63}$/'
+    description: 'Ongeldig formaat'
+    lang: '@lang_nl'
+  
+  regex_nl_isKeyword:
+    name: 'isKeyword'
+    pattern: '/^[a-zA-Z0-9 -_\/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,150}$/u'
+    description: 'Het ingevulde wachtwoord dient tussen de 2 en 16 karakters te bevatten. Speciale tekens die toegestaan zijn: \/)(€§\-_!,;:=+\ '
+    lang: '@lang_nl'
+  
+  regex_nl_isLocation:
+    name: 'isLocation'
+    pattern: '/^[[a-zA-Z0-9 ,\._\/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ-]{2,150}$/u'
+    description: 'Ongeldig formaat'
+    lang: '@lang_nl'
+  
+  regex_nl_isPseudo:
+    name: 'isPseudo'
+    pattern: '/^([a-zA-Z0-9-_]{2,30})|([a-zA-Z0-9\+_\-]+)(\.[a-zA-Z0-9\+_\-]+)*@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,6}$/u'
+    description: 'De gebruikersnaam mag geen tekens met accenten bevatten en dient tussen de 2 en 30 karakters lang te zijn. '
+    lang: '@lang_nl'
+  
+  regex_nl_isCivility:
+    name: 'isCivility'
+    pattern: '/^[1-2]$/'
+    description: '1 = Man, 2 = Vrouw'
+    lang: '@lang_nl'
+  
+  regex_nl_isPassword:
+    name: 'isPassword'
+    pattern: '/^[a-zA-Z0-9\.\-_!@]{8,16}$/'
+    description: 'At least 7 letters (accentuated included) and 1 digit. Between 8 and 16 characters. Special characters allowed : ".-_!@".'
+    lang: '@lang_nl'
+  
+  regex_nl_isDate:
+    name: 'isDate'
+    pattern: '/^(([0-3][0-9])|[0-9]{4})[-\/ ]([0-1][0-9])[-\/ ](([0-9]{4})|([0-3][0-9]))$/'
+    description: 'Voer een geldige datum in (dd/mm/jjjj).'
+    lang: '@lang_nl'
+  
+  regex_nl_isCard:
+    name: 'isCard'
+    pattern: '/^[0-9a-zA-Z]{8}$/'
+    description: 'De activatiecode bestaat uit 8 karakters.'
+    lang: '@lang_nl'
+  
+  regex_nl_isOptin:
+    name: 'isOptin'
+    pattern: '/^[0-1]{1}$/i'
+    description: 'boolean'
+    lang: '@lang_nl'
+  
+  regex_nl_isMessage:
+    name: 'isMessage'
+    pattern: '/^.{30,400}$/'
+    description: 'Je bericht dient tussen de 30 en 400 karakters te bevatten.'
+    lang: '@lang_nl'
+  
+  regex_nl_isOtherid:
+    name: 'isOtherid'
+    pattern: '/^[0-9a-zA-Z\-_ ]{4,256}$/'
+    description: 'Klantnummer in ongeldig formaat.'
+    lang: '@lang_nl'
+  
+  regex_nl_isEstablishment:
+    name: 'isEstablishment'
+    pattern: '/^[a-zA-Z0-9- ''ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ<>%&]{2,300}$/'
+    description: 'Only letters, digits, dashes and underscore. Between 2 and 300 characters.'
+    lang: '@lang_nl'
+  
+  regex_nl_isOauthId:
+    name: 'isOauthId'
+    pattern: '/^[0-9a-zA-Z]{8,45}$/'
+    description: 'Ongeldig OAuthId'
+    lang: '@lang_nl'
+  
+  regex_nl_isUuid:
+    name: 'isUuid'
+    pattern: '/^[a-zA-Z-0-9]{1,400}$/'
+    description: 'Ongeldig UUID'
+    lang: '@lang_nl'
+
+# Language references (these would need to be defined separately or exist in the system)
+# The @lang_fr and @lang_nl references assume Lang entities exist with lang_id values 1 and 3 respectively
