@@ -13,6 +13,7 @@ use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\JoinTable;
 use Doctrine\ORM\Mapping\ManyToMany;
 use Doctrine\ORM\Mapping\ManyToOne;
+use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\Table;
 use Doctrine\ORM\Mapping\UniqueConstraint;
 use Obiz\MegaBundle\Repository\RegexRepository;
@@ -36,12 +37,15 @@ class Regex implements \Stringable
     #[Column(name: 'pattern', type: 'string', length: 200, nullable: false)]
     private string $pattern;
 
-    #[Column(name: 'description', type: 'string', length: 500, nullable: true, options: ['default' => null])]
-    private ?string $description = null;
-
     #[ManyToOne(targetEntity: Lang::class)]
     #[JoinColumn(name: 'lang', referencedColumnName: 'lang_id', nullable: false)]
     private Lang $lang;
+
+    #[Column(name: 'description', type: 'string', length: 500, nullable: true, options: ['default' => null])]
+    private ?string $description = null;
+
+    #[Column(name: 'associated_kv', type: 'string', length: 100, nullable: true, options: ['default' => null])]
+    private ?string $associatedKv = null;
 
     #[JoinTable(
         name: 'program_regex',
@@ -51,9 +55,13 @@ class Regex implements \Stringable
     #[ManyToMany(targetEntity: Program::class, inversedBy: 'regexes')]
     private Collection $programs;
 
+    #[OneToMany(mappedBy: 'regex', targetEntity: RegexField::class, cascade: ['persist', 'remove'], orphanRemoval: true)]
+    private Collection $fields;
+
     public function __construct()
     {
         $this->programs = new ArrayCollection();
+        $this->fields = new ArrayCollection();
     }
 
     public function getId(): int
@@ -109,12 +117,24 @@ class Regex implements \Stringable
         return $this;
     }
 
+    public function getAssociatedKv(): ?string
+    {
+        return $this->associatedKv;
+    }
+
+    public function setAssociatedKv(?string $associatedKv): self
+    {
+        $this->associatedKv = $associatedKv;
+
+        return $this;
+    }
+
     public function getPrograms(): Collection
     {
         return $this->programs;
     }
 
-    public function setPrograms(Collection $programs): Regex
+    public function setPrograms(Collection $programs): self
     {
         $this->programs = $programs;
 
@@ -141,8 +161,39 @@ class Regex implements \Stringable
         return $this;
     }
 
+    public function getFields(): Collection
+    {
+        return $this->fields;
+    }
+
+    public function setFields(Collection $fields): self
+    {
+        $this->fields = $fields;
+
+        return $this;
+    }
+
+    public function addField(RegexField $field): self
+    {
+        if (!$this->fields->contains($field)) {
+            $this->fields[] = $field;
+        }
+
+        return $this;
+    }
+
+    public function removeField(RegexField $field): self
+    {
+        if ($this->fields->contains($field)) {
+            $this->fields->removeElement($field);
+        }
+
+        return $this;
+    }
+
     public function __toString(): string
     {
         return '#'.$this->getId().' - '.$this->getName();
     }
 }
+
