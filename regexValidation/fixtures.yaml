@@ -1,0 +1,553 @@
+# Regex and RegexField Fixtures
+# Generated from sqlToFixtures.sql
+# French language entries have lang=1, Dutch language entries have lang=3
+
+# French Language Regex Patterns (lang=1)
+regex_french_1:
+  name: 'isName'
+  pattern: '/^[a-zA-Z- ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,300}$/'
+  lang: 1
+  associated_kv: 'validation.isName'
+  description: 'Only letters (accentuated included), spaces and dashes. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_2:
+  name: 'isCity'
+  pattern: '/^.{2,300}$/'
+  lang: 1
+  associated_kv: 'validation.isCity'
+  description: 'Only letters (accentuated included) and dashes. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_3:
+  name: 'isCountry'
+  pattern: '/^.{2,300}$/'
+  lang: 1
+  associated_kv: 'validation.isCity'
+  description: 'Only letters (accentuated included) and dashes. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_4:
+  name: 'isAddress'
+  pattern: '/^.{2,300}$/'
+  lang: 1
+  associated_kv: 'validation.isAddress'
+  description: 'All characters (accentuated and digits included), spaces and dashes. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_5:
+  name: 'isEstablishment'
+  pattern: '/^[a-zA-Z0-9- ''''ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ<>%&]{2,300}$/'
+  lang: 1
+  associated_kv: 'validation.isEstablishment'
+  description: 'Only letters, digits, dashes and underscore. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_6:
+  name: 'isInteger'
+  pattern: '/^[0-9]+$/'
+  lang: 1
+  associated_kv: 'validation.isInteger'
+  description: 'Only numeric values'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_7:
+  name: 'isPhone'
+  pattern: '/^(\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14})?$/'
+  lang: 1
+  associated_kv: 'validation.isPhone'
+  description: 'Phone number format : 00/00/00/00/00 (separators allowed : ./- and space, phone number begins with a zero).'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_8:
+  name: 'isZipcode'
+  pattern: '/^[0-9]{5}$/'
+  lang: 1
+  associated_kv: 'validation.isZipcode'
+  description: 'Five digits'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_9:
+  name: 'isEmail'
+  pattern: '/^([a-zA-Z0-9\+_\-]+)(\.[a-zA-Z0-9\+_\-]+)*@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,6}$/'
+  lang: 1
+  associated_kv: 'validation.isEmail'
+  description: 'Valid email (.extension between 2 and 6 characters)'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_10:
+  name: 'isKeyword'
+  pattern: '/^[[a-zA-Z0-9 -_\/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,150}$/u'
+  lang: 1
+  associated_kv: 'validation.isKeyword'
+  description: 'Only characters (letters, accentuated letters and digits), spaces, dashes, underscore and slashes. Between 2 and 150 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_11:
+  name: 'isLocation'
+  pattern: '/^[[a-zA-Z0-9 ,\._\/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ-]{2,150}$/u'
+  lang: 1
+  associated_kv: 'validation.isLocation'
+  description: 'Only characters (letters, accentuated letters and digits), spaces, dashes, underscore and slashes. Between 2 and 150 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_12:
+  name: 'isPseudo'
+  pattern: '/^([a-zA-Z0-9-_]{2,30})|([a-zA-Z0-9\+_\-]+)(\.[a-zA-Z0-9\+_\-]+)*@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,6}$/u'
+  lang: 1
+  associated_kv: 'validation.isPseudo'
+  description: 'Only letters, digits, dashes and underscore (accentuated letters excluded). Between 2 and 30 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_13:
+  name: 'isCivility'
+  pattern: '/^[1-2]$/'
+  lang: 1
+  associated_kv: 'validation.isCivility'
+  description: '1 = Male, 2 = Female'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_14:
+  name: 'isPassword'
+  pattern: '/^[a-zA-Z[0-9\.\/\)\(€§\-_!,;:=+''''"#&@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{8,16}$/'
+  lang: 1
+  associated_kv: 'validation.password'
+  description: 'At least 7 letters (accentuated included) and 1 digit. Between 8 and 16 characters. Special characters allowed : ".-_!@".'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_15:
+  name: 'isDate'
+  pattern: '/^(((19)(\d{2})|(20)([01])(\d{1}))-(0?[1-9]|1?[012])-(([012])([0-9])|(3[01])))|((([012])([0-9])|(3[01]))-(0?[1-9]|1?[012])-((19)(\d{2})|(20)([01])(\d{1})))$/'
+  lang: 1
+  associated_kv: 'validation.isDate'
+  description: 'Format dd-mm-yyyy'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_16:
+  name: 'isCard'
+  pattern: '/^([0-9a-zA-Z]{8}|[0-9a-zA-Z]{13})$/'
+  lang: 1
+  associated_kv: 'validation.isCard'
+  description: '8 characters (letters, digits),  accentuated letters excluded).'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_17:
+  name: 'isOauthId'
+  pattern: '/^[0-9a-zA-Z]{8,45}$/'
+  lang: 1
+  associated_kv: 'validation.isOauthId'
+  description: 'Letters and digits only, from 8 to 45 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_18:
+  name: 'isOptin'
+  pattern: '/^[0-1]{1}$/i'
+  lang: 1
+  associated_kv: 'validation.isOptin'
+  description: '0 or 1 (accepted)'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_19:
+  name: 'isMessage'
+  pattern: '/^.{30,400}$/m'
+  lang: 1
+  associated_kv: 'validation.isMessage'
+  description: '30 to 400 characters, only letters, numbers, and these special characters : -_/'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_20:
+  name: 'isUuid'
+  pattern: '/^[a-zA-Z-0-9]{1,400}$/'
+  lang: 1
+  associated_kv: 'validation.isUuid'
+  description: 'Letters and digits only, from 1 to 400 characters;'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_french_21:
+  name: 'isOtherid'
+  pattern: '/^[0-9a-zA-Z\-_ ]{4,256}$/'
+  lang: 1
+  associated_kv: 'validation.isOtherid'
+  description: 'Letters, digits, -, _ only, from 4 to 256 characters;'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+# Dutch Language Regex Patterns (lang=3)
+regex_dutch_1:
+  name: 'isName'
+  pattern: '/^[a-zA-Z- ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,300}$/'
+  lang: 3
+  associated_kv: 'validation.isName'
+  description: 'Only letters (accentuated included), spaces and dashes. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_2:
+  name: 'isCity'
+  pattern: '/^.{2,300}$/'
+  lang: 3
+  associated_kv: 'validation.isCity'
+  description: 'Only letters (accentuated included) and dashes. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_3:
+  name: 'isCountry'
+  pattern: '/^.{2,300}$/'
+  lang: 3
+  associated_kv: 'validation.isCity'
+  description: 'Only letters (accentuated included) and dashes. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_4:
+  name: 'isAddress'
+  pattern: '/^.{2,300}$/'
+  lang: 3
+  associated_kv: 'validation.isAddress'
+  description: 'All characters (accentuated and digits included), spaces and dashes. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_5:
+  name: 'isEstablishment'
+  pattern: '/^[a-zA-Z0-9- ''''ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ<>%&]{2,300}$/'
+  lang: 3
+  associated_kv: 'validation.isEstablishment'
+  description: 'Only letters, digits, dashes and underscore. Between 2 and 300 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_6:
+  name: 'isInteger'
+  pattern: '/^[0-9]+$/'
+  lang: 3
+  associated_kv: 'validation.isInteger'
+  description: 'Only numeric values'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_7:
+  name: 'isPhone'
+  pattern: '/^(\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14})?$/'
+  lang: 3
+  associated_kv: 'validation.isPhone'
+  description: 'Phone number format : 00/00/00/00/00 (separators allowed : ./- and space, phone number begins with a zero).'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_8:
+  name: 'isZipcode'
+  pattern: '/^[0-9]{5}$/'
+  lang: 3
+  associated_kv: 'validation.isZipcode'
+  description: 'Five digits'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_9:
+  name: 'isEmail'
+  pattern: '/^([a-zA-Z0-9\+_\-]+)(\.[a-zA-Z0-9\+_\-]+)*@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,6}$/'
+  lang: 3
+  associated_kv: 'validation.isEmail'
+  description: 'Valid email (.extension between 2 and 6 characters)'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_10:
+  name: 'isKeyword'
+  pattern: '/^[[a-zA-Z0-9 -_\/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{2,150}$/u'
+  lang: 3
+  associated_kv: 'validation.isKeyword'
+  description: 'Only characters (letters, accentuated letters and digits), spaces, dashes, underscore and slashes. Between 2 and 150 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_11:
+  name: 'isLocation'
+  pattern: '/^[[a-zA-Z0-9 ,\._\/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ-]{2,150}$/u'
+  lang: 3
+  associated_kv: 'validation.isLocation'
+  description: 'Only characters (letters, accentuated letters and digits), spaces, dashes, underscore and slashes. Between 2 and 150 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_12:
+  name: 'isPseudo'
+  pattern: '/^([a-zA-Z0-9-_]{2,30})|([a-zA-Z0-9\+_\-]+)(\.[a-zA-Z0-9\+_\-]+)*@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,6}$/u'
+  lang: 3
+  associated_kv: 'validation.isPseudo'
+  description: 'Only letters, digits, dashes and underscore (accentuated letters excluded). Between 2 and 30 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_13:
+  name: 'isCivility'
+  pattern: '/^[1-2]$/'
+  lang: 3
+  associated_kv: 'validation.isCivility'
+  description: '1 = Male, 2 = Female'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_14:
+  name: 'isPassword'
+  pattern: '/^[a-zA-Z[0-9\.\/\)\(€§\-_!,;:=+''''"#&@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]{8,16}$/'
+  lang: 3
+  associated_kv: 'validation.password'
+  description: 'At least 7 letters (accentuated included) and 1 digit. Between 8 and 16 characters. Special characters allowed : ".-_!@".'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_15:
+  name: 'isDate'
+  pattern: '/^(((19)(\d{2})|(20)([01])(\d{1}))-(0?[1-9]|1?[012])-(([012])([0-9])|(3[01])))|((([012])([0-9])|(3[01]))-(0?[1-9]|1?[012])-((19)(\d{2})|(20)([01])(\d{1})))$/'
+  lang: 3
+  associated_kv: 'validation.isDate'
+  description: 'Format dd-mm-yyyy'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_16:
+  name: 'isCard'
+  pattern: '/^([0-9a-zA-Z]{8}|[0-9a-zA-Z]{13})$/'
+  lang: 3
+  associated_kv: 'validation.isCard'
+  description: '8 characters (letters, digits),  accentuated letters excluded).'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_17:
+  name: 'isOauthId'
+  pattern: '/^[0-9a-zA-Z]{8,45}$/'
+  lang: 3
+  associated_kv: 'validation.isOauthId'
+  description: 'Letters and digits only, from 8 to 45 characters.'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_18:
+  name: 'isOptin'
+  pattern: '/^[0-1]{1}$/i'
+  lang: 3
+  associated_kv: 'validation.isOptin'
+  description: '0 or 1 (accepted)'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_19:
+  name: 'isMessage'
+  pattern: '/^.{30,400}$/m'
+  lang: 3
+  associated_kv: 'validation.isMessage'
+  description: '30 to 400 characters, only letters, numbers, and these special characters : -_/'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_20:
+  name: 'isUuid'
+  pattern: '/^[a-zA-Z-0-9]{1,400}$/'
+  lang: 3
+  associated_kv: 'validation.isUuid'
+  description: 'Letters and digits only, from 1 to 400 characters;'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+regex_dutch_21:
+  name: 'isOtherid'
+  pattern: '/^[0-9a-zA-Z\-_ ]{4,256}$/'
+  lang: 3
+  associated_kv: 'validation.isOtherid'
+  description: 'Letters, digits, -, _ only, from 4 to 256 characters;'
+  created_at: '2024-01-01 00:00:00'
+  updated_at: null
+
+# RegexField entities (field mappings)
+regex_field_1:
+  regex_id: 1  # References regex entry #1
+  field: 'lastname'
+
+regex_field_2:
+  regex_id: 1  # References regex entry #1
+  field: 'firstname'
+
+regex_field_3:
+  regex_id: 2  # References regex entry #2
+  field: 'city'
+
+regex_field_4:
+  regex_id: 2  # References regex entry #2
+  field: 'country'
+
+regex_field_5:
+  regex_id: 3  # References regex entry #3
+  field: 'city'
+
+regex_field_6:
+  regex_id: 3  # References regex entry #3
+  field: 'country'
+
+regex_field_7:
+  regex_id: 4  # References regex entry #4
+  field: 'address'
+
+regex_field_8:
+  regex_id: 7  # References regex entry #7
+  field: 'phone'
+
+regex_field_9:
+  regex_id: 8  # References regex entry #8
+  field: 'zipcode'
+
+regex_field_10:
+  regex_id: 9  # References regex entry #9
+  field: 'email'
+
+regex_field_11:
+  regex_id: 12  # References regex entry #12
+  field: 'pseudo'
+
+regex_field_12:
+  regex_id: 13  # References regex entry #13
+  field: 'civility'
+
+regex_field_13:
+  regex_id: 14  # References regex entry #14
+  field: 'password'
+
+regex_field_14:
+  regex_id: 14  # References regex entry #14
+  field: 'new_password'
+
+regex_field_15:
+  regex_id: 15  # References regex entry #15
+  field: 'birthday'
+
+regex_field_16:
+  regex_id: 16  # References regex entry #16
+  field: 'card'
+
+regex_field_17:
+  regex_id: 17  # References regex entry #17
+  field: 'facebook_id'
+
+regex_field_18:
+  regex_id: 17  # References regex entry #17
+  field: 'google_id'
+
+regex_field_19:
+  regex_id: 18  # References regex entry #18
+  field: 'opt_in'
+
+regex_field_20:
+  regex_id: 18  # References regex entry #18
+  field: 'opt_in_client'
+
+regex_field_21:
+  regex_id: 20  # References regex entry #20
+  field: 'uuid'
+
+regex_field_22:
+  regex_id: 22  # References regex entry #22
+  field: 'lastname'
+
+regex_field_23:
+  regex_id: 22  # References regex entry #22
+  field: 'firstname'
+
+regex_field_24:
+  regex_id: 23  # References regex entry #23
+  field: 'city'
+
+regex_field_25:
+  regex_id: 23  # References regex entry #23
+  field: 'country'
+
+regex_field_26:
+  regex_id: 24  # References regex entry #24
+  field: 'city'
+
+regex_field_27:
+  regex_id: 24  # References regex entry #24
+  field: 'country'
+
+regex_field_28:
+  regex_id: 25  # References regex entry #25
+  field: 'address'
+
+regex_field_29:
+  regex_id: 28  # References regex entry #28
+  field: 'phone'
+
+regex_field_30:
+  regex_id: 29  # References regex entry #29
+  field: 'zipcode'
+
+regex_field_31:
+  regex_id: 30  # References regex entry #30
+  field: 'email'
+
+regex_field_32:
+  regex_id: 33  # References regex entry #33
+  field: 'pseudo'
+
+regex_field_33:
+  regex_id: 34  # References regex entry #34
+  field: 'civility'
+
+regex_field_34:
+  regex_id: 35  # References regex entry #35
+  field: 'password'
+
+regex_field_35:
+  regex_id: 35  # References regex entry #35
+  field: 'new_password'
+
+regex_field_36:
+  regex_id: 36  # References regex entry #36
+  field: 'birthday'
+
+regex_field_37:
+  regex_id: 37  # References regex entry #37
+  field: 'card'
+
+regex_field_38:
+  regex_id: 38  # References regex entry #38
+  field: 'facebook_id'
+
+regex_field_39:
+  regex_id: 38  # References regex entry #38
+  field: 'google_id'
+
+regex_field_40:
+  regex_id: 39  # References regex entry #39
+  field: 'opt_in'
+
+regex_field_41:
+  regex_id: 39  # References regex entry #39
+  field: 'opt_in_client'
+
+regex_field_42:
+  regex_id: 41  # References regex entry #41
+  field: 'uuid'
+
